@@ -32,7 +32,8 @@ namespace Vending_Machine
             for (int i = 0; i < Denominations.Length; i++)
             {
                 Console.WriteLine((i + 1) + ". " + Denominations[i]);
-            } 
+            }
+            Console.WriteLine("\nS. Stop adding money.");
         }        
 
         public static void PrintItemsForSale()
