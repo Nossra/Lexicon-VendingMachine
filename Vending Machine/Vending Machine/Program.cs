@@ -19,10 +19,9 @@ namespace Vending_Machine
             vm.ReturnChange(user.Balance);
             
             /*TODO
-             * Implement validation for when your balance is too low for an item
              * Add another product type
              * Show message about how the product is used, being different for all product types.
-             * Items should inherit methods to be overriden from an interface.
+             * Items should inherit methods to be overriden from an interface. (I have no methods to inherit :<)
              * Examine item option to show everything about it.
              */
         }

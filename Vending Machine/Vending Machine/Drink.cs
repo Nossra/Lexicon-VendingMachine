@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vending_Machine
 {
-    class Drink : Item
+    class Drink : Item, IItems
     {
         bool isCarbonated;
         bool includesStraw;
@@ -18,6 +18,16 @@ namespace Vending_Machine
         {
             this.isCarbonated = isCarbonated;
             this.includesStraw = includesStraw;
+        }
+
+        public void ShowMessage()
+        {
+            Console.WriteLine("This is a drink.");
+        }
+
+        public void UseItem()
+        {
+            Console.WriteLine("You drank your item.");
         }
     }
 }

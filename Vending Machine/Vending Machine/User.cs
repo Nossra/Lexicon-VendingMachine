@@ -133,14 +133,14 @@ namespace Vending_Machine
 
                     if (Input >= 1 && Input <= VendingMachine.Items.Length)
                     {
-                        Console.WriteLine("Do you want to buy " + VendingMachine.Items[Input].Name + " for " + VendingMachine.Items[Input].Price + "?\n"
+                        Console.WriteLine("Do you want to buy " + VendingMachine.Items[Input - 1].Name + " for " + VendingMachine.Items[Input - 1].Price + "?\n"
                                + "Y. Yes\n"
                                + "N. No\n");
                         if (Validate())
                         {   if (BalanceCheck())
                             {
-                                Balance -= VendingMachine.Items[Input].Price;
-                                Console.WriteLine("\nYou bought " + VendingMachine.Items[Input].Name + ". Your balance is: " + Balance);
+                                Balance -= VendingMachine.Items[Input - 1].Price;
+                                Console.WriteLine("\nYou bought " + VendingMachine.Items[Input - 1].Name + ". Your balance is: " + Balance);
                                 Clear();
                             }
                             else
@@ -151,7 +151,7 @@ namespace Vending_Machine
                         }
                         else
                         {
-                            Console.WriteLine("You declined to buy: " + VendingMachine.Items[input].Name);
+                            Console.WriteLine("You declined to buy: " + VendingMachine.Items[Input - 1].Name);
                             Clear();
                         }
                     }
@@ -170,5 +170,6 @@ namespace Vending_Machine
                 }
             }
         }
+        
     }
 }

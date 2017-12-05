@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vending_Machine
 {
-    class Food : Item
+    class Food : Item, IItems
     {
         bool isLCHF;
         bool isVegetarian;
@@ -18,6 +18,16 @@ namespace Vending_Machine
         {
             this.isLCHF = isLCHF;
             this.isVegetarian = isVegetarian;
+        }
+
+        public void ShowMessage()
+        {
+            Console.WriteLine("This is a food.");
+        }
+
+        public void UseItem()
+        {
+            Console.WriteLine("You ate your item.");
         }
     }
 }
