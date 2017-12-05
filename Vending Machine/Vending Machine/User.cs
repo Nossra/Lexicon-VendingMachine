@@ -25,7 +25,8 @@ namespace Vending_Machine
             while (isAddingMoney)
             {
                 ConsoleKeyInfo s = Console.ReadKey(true);
-                
+                //Ridiculous switch case, but was a first draft and was pressed for time.
+                //It worked so i let it be, otherwise I would change it to a normal for loop.
                 switch (s.KeyChar)
                 {
                     case '1':
